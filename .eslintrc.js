@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -45,6 +46,7 @@ module.exports = {
         'comma-style': [2, 'last'],
         'comma-dangle': [2, 'always-multiline'],
         'i18next/no-literal-string': [2, { markupOnly: true }],
+        'no-trailing-spaces': [0],
     },
     globals: {
         __IS_DEV__: true,
