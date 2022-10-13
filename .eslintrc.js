@@ -9,7 +9,14 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
     ],
-    overrides: [],
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -45,10 +52,14 @@ module.exports = {
         'brace-style': [2, '1tbs', { allowSingleLine: false }],
         'comma-style': [2, 'last'],
         'comma-dangle': [2, 'always-multiline'],
-        'i18next/no-literal-string': [2, { markupOnly: true }],
+        'i18next/no-literal-string': [2, {
+            markupOnly: true,
+            ignoreAttribute: ['data-testid'],
+        }],
         'no-trailing-spaces': [0],
     },
     globals: {
         __IS_DEV__: true,
     },
+
 };
