@@ -54,7 +54,7 @@ module.exports = {
         'comma-dangle': [2, 'always-multiline'],
         'i18next/no-literal-string': [2, {
             markupOnly: true,
-            ignoreAttribute: ['data-testid'],
+            ignoreAttribute: ['data-testid', 'to'],
         }],
         'no-trailing-spaces': [0],
     },
