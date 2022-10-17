@@ -34,6 +34,7 @@
 
 .link {
     margin-left: 10px;
+    transition: 0.2s opacity;
     opacity: 1;
 }
 
@@ -59,7 +60,6 @@
 
     .link {
         opacity: 0;
-        transition: 0.2s opacity;
         width: 0;
     }
 }
