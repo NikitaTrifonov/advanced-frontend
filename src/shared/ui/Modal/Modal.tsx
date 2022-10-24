@@ -75,6 +75,5 @@ export const Modal = (props: ModalProps) => {
                 </div>
             </div>
         </Portal>
-
     );
 };

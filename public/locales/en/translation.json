@@ -9,5 +9,7 @@
   "О сайте": "About",
   "Переключить": "Toggle",
   "Короткий язык": "En",
-  "Войти": "Войти"
+  "Войти": "Войти",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }
