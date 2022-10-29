@@ -9,9 +9,12 @@
   "О сайте": "About",
   "Переключить": "Toggle",
   "Короткий язык": "En",
-  "Войти": "Войти",
+  "Войти": "Login",
   "Increment": "Increment",
   "Decrement": "Decrement",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "Uncorrected username or password ",
+  "Выйти": "Выйти"
 }
