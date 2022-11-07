@@ -17,7 +17,7 @@ export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({
     loginForm: {
-        username: 'adsd',
+        username: 'add',
         password: '123',
     },
 })];

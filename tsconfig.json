@@ -12,6 +12,7 @@
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
     "moduleResolution": "node",
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"] //значит что все абсолютные пути будут идти от папки src
@@ -30,7 +31,7 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
   "ts-node": {
     "compilerOptions": {
