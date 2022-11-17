@@ -26,7 +26,7 @@
     }
   ],
   "profile": {
-    "first": "Никита",
+    "firstname": "Никита",
     "lastname": "Трифонов",
     "age": 29,
     "currency": "RUB",

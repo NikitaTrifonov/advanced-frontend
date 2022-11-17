@@ -3,13 +3,17 @@ import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
-    getProfileData,
-    getProfileError, getProfileForm,
-    getProfileIsLoading, getProfileReadonly, profileActions,
+    getProfileError,
+    getProfileForm,
+    getProfileIsLoading,
+    getProfileReadonly,
+    getProfileValidateErrors,
+    profileActions,
     ProfileCard,
-    profileReducer,
+    profileReducer, ValidateProfileError,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
@@ -25,20 +29,35 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = (props: ProfilePageProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('profile');
     const { className } = props;
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
+    const validateErrors = useSelector(getProfileValidateErrors);
     const readonly = useSelector(getProfileReadonly);
 
+    const validateProfileErrorTranslate = {
+        [ValidateProfileError.NO_DATA]: t('Нет данных'),
+        [ValidateProfileError.SERVER_ERROR]: t('Ошибка сервера'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Не указан возраст'),
+        [ValidateProfileError.INCORRECT_COUNTRY]: t('Не указана страна'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Ошибка ввода имени или фамилии'),
+        [ValidateProfileError.INCORRECT_CITY]: t('Не указан город'),
+        [ValidateProfileError.INCORRECT_AVATAR]: t('Не указан адрес аватара'),
+        [ValidateProfileError.INCORRECT_CURRENCY]: t('Не выбрана валюта'),
+        [ValidateProfileError.INCORRECT_USERNAME]: t('Не указано имя пользователя'),
+    };
+
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstname = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ first: value || '' }));
+        dispatch(profileActions.updateProfile({ firstname: value || '' }));
     }, [dispatch]);
 
     const onChangeLastname = useCallback((value?: string) => {
@@ -77,6 +96,13 @@ const ProfilePage = (props: ProfilePageProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                {validateErrors?.length && validateErrors.map((error) => (
+                    <Text
+                        key={error}
+                        theme={TextTheme.ERROR}
+                        text={validateProfileErrorTranslate[error]}
+                    />
+                ))}
                 <ProfileCard
                     data={formData}
                     error={error}

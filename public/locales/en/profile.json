@@ -11,5 +11,14 @@
   "Введите ссылку на аватар": "Input avatar link",
   "Сохранить": "Save",
   "Отменить": "Cancel",
-  "Редактировать": "Edit"
+  "Редактировать": "Edit",
+  "Нет данных": "Data error",
+  "Ошибка сервера": "Server error",
+  "Не указан возраст": "Age no specified",
+  "Не указана страна": "Country no specified",
+  "Ошибка ввода имени или фамилии": "Firstname or lastname error",
+  "Не указан город": "City no specified",
+  "Не указан адрес аватара": "Avatar url no specified",
+  "Не выбрана валюта": "Choice currency",
+  "Не указано имя пользователя": "Username no specified"
 }
