@@ -5,7 +5,7 @@ import { AppRoutes, RoutePath } from 'shared/lib/routePath/routePath';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import { ProfilePage } from 'pages/Profilepage';
 
-type AppRoutesProps = RouteProps & {
+export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
 }
 
