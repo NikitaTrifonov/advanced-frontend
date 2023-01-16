@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "dff",
+      "id": "O5q4cyY"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "1231d",
+      "id": "-lyh_4A"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hi",
+      "id": "hF-cbU8"
     }
   ],
   "users": [
@@ -108,7 +128,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://media.istockphoto.com/id/962366210/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B0%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BD%D1%8B%D0%B9-%D1%85%D0%B0%D0%BA%D0%B5%D1%80-%D1%81-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA%D0%BE%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%BC-%D0%BA%D0%BE%D0%B4%D0%BE%D0%BC-%D0%BA%D0%B8%D0%B1%D0%B5%D1%80%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8.jpg?s=612x612&w=0&k=20&c=Wm1UK-4sCr_kl7zpQss9nZr-Cc638YqBVHiHKID8qNw="
+      "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     },
     {
       "id": "2",
@@ -118,14 +138,28 @@
       "avatar": "https://media.istockphoto.com/id/962366210/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B0%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BD%D1%8B%D0%B9-%D1%85%D0%B0%D0%BA%D0%B5%D1%80-%D1%81-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA%D0%BE%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%BC-%D0%BA%D0%BE%D0%B4%D0%BE%D0%BC-%D0%BA%D0%B8%D0%B1%D0%B5%D1%80%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8.jpg?s=612x612&w=0&k=20&c=Wm1UK-4sCr_kl7zpQss9nZr-Cc638YqBVHiHKID8qNw="
     }
   ],
-  "profile": {
-    "firstname": "Никита",
-    "lastname": "Трифонов",
-    "age": 29,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Никита",
+      "lastname": "Трифонов",
+      "age": 29,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    },
+    {
+      "id": "2",
+      "firstname": "Джон",
+      "lastname": "Иванов",
+      "age": 39,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://media.istockphoto.com/id/962366210/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B0%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BD%D1%8B%D0%B9-%D1%85%D0%B0%D0%BA%D0%B5%D1%80-%D1%81-%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA%D0%BE%D0%BC-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%BC-%D0%BA%D0%BE%D0%B4%D0%BE%D0%BC-%D0%BA%D0%B8%D0%B1%D0%B5%D1%80%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8.jpg?s=612x612&w=0&k=20&c=Wm1UK-4sCr_kl7zpQss9nZr-Cc638YqBVHiHKID8qNw="
+    }
+  ]
 }

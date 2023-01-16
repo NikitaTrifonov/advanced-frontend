@@ -18,6 +18,8 @@ import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
@@ -37,6 +39,7 @@ const ProfilePage = (props: ProfilePageProps) => {
     const error = useSelector(getProfileError);
     const validateErrors = useSelector(getProfileValidateErrors);
     const readonly = useSelector(getProfileReadonly);
+    const { id } = useParams<{id: string}>();
 
     const validateProfileErrorTranslate = {
         [ValidateProfileError.NO_DATA]: t('Нет данных'),
@@ -50,11 +53,11 @@ const ProfilePage = (props: ProfilePageProps) => {
         [ValidateProfileError.INCORRECT_USERNAME]: t('Не указано имя пользователя'),
     };
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ firstname: value || '' }));
