@@ -277,6 +277,18 @@
       "userId": "2",
       "text": "Hi",
       "id": "3ZXXztk"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Привет",
+      "id": "ho3LeT9"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "хахаха",
+      "id": "sgSiVXf"
     }
   ],
   "users": [
