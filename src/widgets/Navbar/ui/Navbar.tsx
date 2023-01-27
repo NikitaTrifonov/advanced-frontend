@@ -1,5 +1,5 @@
 import React, {
-    FC, memo, useCallback, useState, 
+    FC, memo, useCallback, useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -34,7 +34,7 @@ export const Navbar: FC<NavbarProps> = memo((props: NavbarProps) => {
 
     if (authData) {
         return (
-            <div className={classNames(cls.navbar, {}, [className])}>
+            <header className={classNames(cls.navbar, {}, [className])}>
                 <Button
                     theme={ButtonTheme.CLEAR_INVERTED}
                     className={cls.links}
@@ -42,12 +42,12 @@ export const Navbar: FC<NavbarProps> = memo((props: NavbarProps) => {
                 >
                     {t('Выйти')}
                 </Button>
-            </div>
+            </header>
         );
     }
 
     return (
-        <div className={classNames(cls.navbar, {}, [className])}>
+        <header className={classNames(cls.navbar, {}, [className])}>
             <Button
                 theme={ButtonTheme.CLEAR_INVERTED}
                 className={cls.links}
@@ -62,6 +62,6 @@ export const Navbar: FC<NavbarProps> = memo((props: NavbarProps) => {
                 />
             )}
 
-        </div>
+        </header>
     );
 });
