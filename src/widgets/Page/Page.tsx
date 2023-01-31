@@ -16,7 +16,7 @@ export const Page = memo((props: PageProps) => {
     const wrapperRef = useRef() as MutableRefObject<HTMLElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
 
-    useInfiniteScroll({
+    const isIntersected = useInfiniteScroll({
         triggerRef,
         wrapperRef,
         callback: onScrollEnd,
@@ -28,7 +28,7 @@ export const Page = memo((props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
         >
             {children}
-            <div ref={triggerRef} />
+            {!isIntersected && <div ref={triggerRef} />}
         </section>
     );
 });
