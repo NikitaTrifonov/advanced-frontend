@@ -7,7 +7,7 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { Article, ArticleView } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 12 : 3)
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
     .map((item, index) => (
         <ArticleListItemSkeleton view={view} key={index} />

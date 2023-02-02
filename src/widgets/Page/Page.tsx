@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
-    memo, MutableRefObject, ReactNode, useRef, UIEvent,
+    memo, MutableRefObject, ReactNode, useRef, UIEvent, useEffect,
 } from 'react';
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -19,8 +19,10 @@ interface PageProps {
 }
 
 export const Page = memo((props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
-    const wrapperRef = useRef() as MutableRefObject<HTMLElement>;
+    const {
+        className, children, onScrollEnd,
+    } = props;
+    const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const { pathname } = useLocation();
     const scrollPosition = useSelector((state: StateSchema) => getScrollSaveByPath(state, pathname));
