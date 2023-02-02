@@ -9,8 +9,6 @@ export interface UseInfiniteScrollOptions {
 }
 
 export function useInfiniteScroll({ callback, wrapperRef, triggerRef }: UseInfiniteScrollOptions) {
-    const [isIntersected, setIsIntersected] = useState(false);
-
     useEffect(() => {
         const wrapperElement = wrapperRef.current;
         const triggerElement = triggerRef.current;
@@ -26,9 +24,7 @@ export function useInfiniteScroll({ callback, wrapperRef, triggerRef }: UseInfin
             observer = new IntersectionObserver(([entry]) => {
                 if (entry.isIntersecting) {
                     callback();
-                    setIsIntersected(true);
                 }
-                setIsIntersected(false);
             }, options);
 
             if (triggerElement) {
@@ -42,7 +38,5 @@ export function useInfiniteScroll({ callback, wrapperRef, triggerRef }: UseInfin
                 observer.unobserve(triggerElement);
             }
         };
-    }, [callback, triggerRef, wrapperRef, isIntersected]);
-
-    return isIntersected;
+    }, [callback, triggerRef, wrapperRef]);
 }

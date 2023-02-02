@@ -26,7 +26,7 @@ export const Page = memo((props: PageProps) => {
     const scrollPosition = useSelector((state: StateSchema) => getScrollSaveByPath(state, pathname));
     const dispatch = useAppDispatch();
 
-    const isIntersected = useInfiniteScroll({
+    useInfiniteScroll({
         triggerRef,
         wrapperRef,
         callback: onScrollEnd,
@@ -50,7 +50,9 @@ export const Page = memo((props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
         >
             {children}
-            {(!isIntersected && onScrollEnd) ? <div className={cls.trigger} ref={triggerRef} /> : null}
+            {(onScrollEnd)
+                ? <div className={cls.trigger} ref={triggerRef} />
+                : null }
         </section>
     );
 });
