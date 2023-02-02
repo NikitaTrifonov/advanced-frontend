@@ -50,7 +50,7 @@ export const Page = memo((props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
         >
             {children}
-            {!isIntersected && <div ref={triggerRef} />}
+            {(!isIntersected && onScrollEnd) ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </section>
     );
 });
