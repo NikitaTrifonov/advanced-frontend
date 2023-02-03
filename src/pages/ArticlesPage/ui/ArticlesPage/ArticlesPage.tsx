@@ -7,7 +7,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useSelector } from 'react-redux';
 import {
-    getArticlesPageError,
+    getArticlesPageError, getArticlesPageHasMore,
     getArticlesPageIsLoading,
     getArticlesPageView,
 } from 'pages/ArticlesPage/model/selectors/articlesPageSelectors';
@@ -50,6 +50,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
             <Page
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
+                isLoading={isLoading}
             >
                 <ArticlesPageFilters />
                 <ArticleList

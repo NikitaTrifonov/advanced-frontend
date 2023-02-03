@@ -16,11 +16,12 @@ interface PageProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
+    isLoading?: boolean;
 }
 
 export const Page = memo((props: PageProps) => {
     const {
-        className, children, onScrollEnd,
+        className, children, onScrollEnd, isLoading = false,
     } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
@@ -32,6 +33,7 @@ export const Page = memo((props: PageProps) => {
         triggerRef,
         wrapperRef,
         callback: onScrollEnd,
+        isLoading,
     });
 
     const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
@@ -52,7 +54,7 @@ export const Page = memo((props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
         >
             {children}
-            {(onScrollEnd)
+            {onScrollEnd
                 ? <div className={cls.trigger} ref={triggerRef} />
                 : null }
         </section>

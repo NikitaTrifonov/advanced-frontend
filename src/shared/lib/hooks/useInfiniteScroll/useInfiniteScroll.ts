@@ -6,9 +6,12 @@ export interface UseInfiniteScrollOptions {
     callback?: () => void;
     triggerRef: MutableRefObject<HTMLElement>;
     wrapperRef: MutableRefObject<HTMLElement>;
+    isLoading: boolean;
 }
 
-export function useInfiniteScroll({ callback, wrapperRef, triggerRef }: UseInfiniteScrollOptions) {
+export function useInfiniteScroll({
+    callback, wrapperRef, triggerRef, isLoading,
+}: UseInfiniteScrollOptions) {
     useEffect(() => {
         const wrapperElement = wrapperRef.current;
         const triggerElement = triggerRef.current;
@@ -38,5 +41,5 @@ export function useInfiniteScroll({ callback, wrapperRef, triggerRef }: UseInfin
                 observer.unobserve(triggerElement);
             }
         };
-    }, [callback, triggerRef, wrapperRef]);
+    }, [callback, isLoading, triggerRef, wrapperRef]);
 }
