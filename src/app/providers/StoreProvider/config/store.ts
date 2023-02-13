@@ -4,7 +4,7 @@ import {
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
 import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager';
-import { $api } from 'app/api/api';
+import { $api } from 'shared/api/api';
 import { scrollSaveReducer } from 'features/ScrollSave';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
