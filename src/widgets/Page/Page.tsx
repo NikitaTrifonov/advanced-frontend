@@ -19,6 +19,8 @@ interface PageProps {
     isLoading?: boolean;
 }
 
+export const PAGE_ID = 'PAGE_ID';
+
 export const Page = memo((props: PageProps) => {
     const {
         className, children, onScrollEnd, isLoading = false,
@@ -52,6 +54,7 @@ export const Page = memo((props: PageProps) => {
             ref={wrapperRef}
             onScroll={onScroll}
             className={classNames(cls.Page, {}, [className])}
+            id={PAGE_ID}
         >
             {children}
             {onScrollEnd
