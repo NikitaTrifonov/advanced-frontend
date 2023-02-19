@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'eslint-plugin-tnd-plugin',
     ],
     rules: {
         'max-len': [2, 125, { ignoreComments: true }],
@@ -47,7 +48,16 @@ module.exports = {
         'comma-dangle': [2, 'always-multiline'],
         'i18next/no-literal-string': [2, {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'target'],
+            ignoreAttribute: [
+                'data-testid',
+                'to',
+                'target',
+                'justify',
+                'align',
+                'direction',
+                'gap',
+                'role',
+            ],
         }],
         'no-trailing-spaces': [0],
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -58,6 +68,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
+        'tnd-plugin/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,

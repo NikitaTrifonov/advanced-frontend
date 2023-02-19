@@ -1,9 +1,8 @@
-import axios from 'axios';
 import { Dispatch } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { loginByUserName } from 'features/AuthByUsername/model/services/loginByUserName/loginByUserName';
 import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { loginByUserName } from './loginByUserName';
 
 // До написания TestAsyncThunk.ts
 
