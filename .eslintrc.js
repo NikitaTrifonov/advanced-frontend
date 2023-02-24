@@ -57,6 +57,7 @@ module.exports = {
                 'direction',
                 'gap',
                 'role',
+                'as',
             ],
         }],
         'no-trailing-spaces': [0],
