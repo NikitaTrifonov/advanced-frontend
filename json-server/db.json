@@ -701,13 +701,14 @@
     {
       "id": "1",
       "first": "Nik",
-      "lastname": "Geek",
+      "lastname": "Трифонов",
       "age": 465,
       "currency": "RUB",
       "country": "Belarus",
-      "city": "Moscow",
+      "city": "Kolomna",
       "username": "admin213",
-      "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/8/60/756615119370608.jpg"
+      "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/8/60/756615119370608.jpg",
+      "firstname": "Никита"
     },
     {
       "id": "2",
