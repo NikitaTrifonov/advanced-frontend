@@ -35,14 +35,15 @@ const options = {
 };
 
 describe('features/EditableProfileCard', () => {
-    test('Режим readonly должен переключиться', async() => {
+    beforeEach(() => {
         componentRender(<EditableProfileCard id="1" />, options);
+    });
+    test('Режим readonly должен переключиться', async() => {
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
         expect(screen.getByTestId('EditableProfileCardHeader.CancelButton')).toBeInTheDocument();
     });
 
     test('При отмене значения должны обнуляться', async() => {
-        componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
         await userEvent.clear(screen.getByTestId('ProfileCard.firstname'));
@@ -61,7 +62,6 @@ describe('features/EditableProfileCard', () => {
     });
 
     test('Должна появиться ошибка', async() => {
-        componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
         await userEvent.clear(screen.getByTestId('ProfileCard.firstname'));
@@ -73,7 +73,6 @@ describe('features/EditableProfileCard', () => {
 
     test('Если нет ошибок валидации, то на сервер должен уйти Put запрос', async() => {
         const mockPutReq = jest.spyOn($api, 'put');
-        componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
 
         await userEvent.type(screen.getByTestId('ProfileCard.firstname'), 'user');
