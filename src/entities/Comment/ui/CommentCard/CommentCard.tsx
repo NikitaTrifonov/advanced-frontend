@@ -22,6 +22,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
         return (
             <VStack
                 isMaxWidth
+                gap="8"
                 className={classNames(cls.CommentCard, {}, [className, cls.loading])}
             >
                 <div className={cls.header}>

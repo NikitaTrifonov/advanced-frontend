@@ -26,7 +26,7 @@ import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {
     className?: string,
-    id: string,
+    id?: string,
 }
 
 const reducers: ReducersList = {
@@ -86,6 +86,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                 <Skeleton width="100%" height={200} />
                 <Skeleton width="100%" height={200} />
             </>
+
         );
     } else if (error) {
         content = (
@@ -132,6 +133,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <VStack
                 gap="16"
+                isMaxWidth
                 className={classNames(cls.ArticleDetails, {}, [className])}
             >
                 {content}
