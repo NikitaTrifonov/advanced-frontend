@@ -59,6 +59,7 @@ module.exports = {
                 'role',
                 'as',
                 'refName',
+                'border',
             ],
         }],
         'no-trailing-spaces': [0],
