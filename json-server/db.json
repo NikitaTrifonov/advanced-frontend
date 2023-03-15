@@ -726,7 +726,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": [
+      "roles": [
         "ADMIN"
       ],
       "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/8/60/756615119370608.jpg"
@@ -735,7 +735,7 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": [
+      "roles": [
         "USER"
       ],
       "avatar": "https://images.techinsider.ru/upload/img_cache/028/028272720043b07b91b0a7a1f77361a5_ce_1000x664x0x0_cropped_666x444.jpg"
