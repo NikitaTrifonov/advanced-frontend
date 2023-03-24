@@ -746,7 +746,7 @@
       "id": "1",
       "first": "Nik",
       "lastname": "Трифонов",
-      "age": 465,
+      "age": 45,
       "currency": "RUB",
       "country": "Belarus",
       "city": "Kolomna",
@@ -819,18 +819,18 @@
   ],
   "profile-ratings": [
     {
-      "id": "1",
-      "rate": 4,
-      "feedback": "Хорошая статья",
+      "rate": 5,
+      "profileId": "1",
       "userId": "1",
-      "profileId": "1"
+      "feedback": "Отлично",
+      "id": 1
     },
     {
-      "id": "2",
-      "rate": 4,
-      "feedback": "Хорошая статья",
+      "rate": 3,
+      "profileId": "2",
       "userId": "1",
-      "profileId": "2"
+      "feedback": "норм",
+      "id": 2
     }
   ]
 }

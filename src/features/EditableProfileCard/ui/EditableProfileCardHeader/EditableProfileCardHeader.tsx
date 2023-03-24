@@ -76,7 +76,6 @@ export const EditableProfileCardHeader = memo((props: EditableProfileCardHeaderP
 
                         )}
                 </div>
-
             )}
         </HStack>
     );
