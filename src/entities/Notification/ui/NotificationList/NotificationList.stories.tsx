@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 import { NotificationList } from './NotificationList';
-import { Notification } from '@/entities/Notification/model/types/notification';
+import { Notification } from '../../model/types/notification';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
