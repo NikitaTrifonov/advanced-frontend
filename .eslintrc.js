@@ -72,6 +72,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'tnd-plugin/path-checker': ['error', { alias: '@' }],
+        'tnd-plugin/public-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
